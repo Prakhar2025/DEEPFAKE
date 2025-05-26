@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Shield - Deepfake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" class="theme-switch">
+        <label for="theme-switch" class="theme-switch-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h1>Truth<span>Shield</span></h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Technology</a>
+                <a href="#">Contact</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="glowing-text">Advanced AI-Powered<br>Deepfake Detection</h1>
+                <p>Detect manipulated media with state-of-the-art artificial intelligence. Our technology can identify deepfakes with high accuracy to help combat misinformation.</p>
+            </div>
+        </div>
+        <div class="particles" id="particles"></div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="var(--body-bg)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="detection-panel">
+                <div class="panel-tabs">
+                    <button class="tab-btn active" data-tab="upload">
+                        <i class="fas fa-upload"></i> Upload Image
+                    </button>
+                    <button class="tab-btn" data-tab="webcam">
+                        <i class="fas fa-camera"></i> Use Webcam
+                    </button>
+                    <button class="tab-btn" data-tab="history">
+                        <i class="fas fa-history"></i> History
+                    </button>
+                </div>
+
+                <div class="panel-content">
+                    <div class="tab-content active" id="upload-tab">
+                        <div class="upload-container">
+                            <div class="upload-area glass-card" id="drop-area">
+                                <input type="file" id="fileInput" accept="image/*" hidden>
+                                <div class="upload-icon">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <h3>Drag & Drop Your Image</h3>
+                                <p>or</p>
+                                <button class="btn primary" id="browse-btn">Browse Files</button>
+                                <p class="file-info" id="file-info"></p>
+                            </div>
+                            <div class="upload-info glass-card">
+                                <h3>How It Works</h3>
+                                <div class="info-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Upload an Image</h4>
+                                        <p>Select or drag & drop any image you want to analyze</p>
+                                    </div>
+                                </div>
+                                <div class="info-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>AI Analysis</h4>
+                                        <p>Our advanced AI model will scan the image for manipulation markers</p>
+                                    </div>
+                                </div>
+                                <div class="info-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Get Results</h4>
+                                        <p>Receive a detailed analysis with confidence score and heatmap</p>
+                                    </div>
+                                </div>
+                                <button class="btn primary full-width" id="upload-btn" disabled>
+                                    <i class="fas fa-search"></i> Analyze Image
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="webcam-tab">
+                        <div class="webcam-container">
+                            <div class="webcam-preview glass-card">
+                                <div class="video-container">
+                                    <video id="video" autoplay playsinline></video>
+                                    <div class="webcam-overlay">
+                                        <div class="corner top-left"></div>
+                                        <div class="corner top-right"></div>
+                                        <div class="corner bottom-left"></div>
+                                        <div class="corner bottom-right"></div>
+                                    </div>
+                                    <div id="webcam-preview-container" class="webcam-preview-container">
+                                        <img id="webcam-preview-image" class="webcam-preview-image" src="/placeholder.svg" alt="Preview">
+                                    </div>
+                                </div>
+                                <div class="webcam-controls">
+                                    <button class="btn secondary" id="switch-camera">
+                                        <i class="fas fa-sync-alt"></i> Switch Camera
+                                    </button>
+                                    <button class="btn primary" id="capture-btn">
+                                        <i class="fas fa-camera"></i> Capture & Analyze
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="webcam-info glass-card">
+                                <h3>Webcam Detection</h3>
+                                <p>Use your webcam to capture and analyze images in real-time. This is perfect for quick checks without having to upload files.</p>
+                                <div class="info-box">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p>For best results, ensure good lighting and position your face clearly in the frame.</p>
+                                </div>
+                                <div class="webcam-tips">
+                                    <h4>Tips for Accurate Results:</h4>
+                                    <ul>
+                                        <li>Ensure good lighting on your face</li>
+                                        <li>Look directly at the camera</li>
+                                        <li>Avoid extreme angles or partial views</li>
+                                        <li>Keep a neutral expression for best results</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="history-tab">
+                        <div class="history-container glass-card">
+                            <div class="history-header">
+                                <h3>Your Analysis History</h3>
+                                <button class="btn secondary small" id="clear-history">
+                                    <i class="fas fa-trash"></i> Clear History
+                                </button>
+                            </div>
+                            <div class="history-list" id="history-list">
+                                <div class="empty-history">
+                                    <i class="fas fa-history"></i>
+                                    <p>Your analysis history will appear here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-container glass-card" id="results-container">
+                <div class="results-header">
+                    <h2><i class="fas fa-chart-bar"></i> Analysis Results</h2>
+                    <button class="close-btn" id="close-results">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="results-content">
+                    <div class="result-summary">
+                        <div class="result-verdict" id="result-verdict">
+                            <!-- Will be filled by JS -->
+                        </div>
+                        <div class="confidence-meter">
+                            <h3>Confidence Level</h3>
+                            <div class="meter-container">
+                                <div class="meter-bar">
+                                    <div class="meter-fill" id="confidence-meter"></div>
+                                </div>
+                                <div class="meter-value" id="confidence-value">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-details">
+                        <div class="image-comparison">
+                            <div class="original-image">
+                                <h3>Analyzed Image</h3>
+                                <div class="image-container" id="preview"></div>
+                            </div>
+                            <div class="heatmap-image">
+                                <h3>Detection Heatmap</h3>
+                                <div class="image-container" id="heatmap">
+                                    <div class="heatmap-placeholder">
+                                        <i class="fas fa-chart-area"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-explanation-container">
+                            <h3>What This Means</h3>
+                            <div class="result-explanation" id="result-explanation">
+                                <!-- Will be filled by JS -->
+                            </div>
+                            <div class="result-actions">
+                                <button class="btn secondary" id="save-result">
+                                    <i class="fas fa-save"></i> Save to History
+                                </button>
+                                <button class="btn primary" id="share-result">
+                                    <i class="fas fa-share-alt"></i> Share Results
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Technology</h2>
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Advanced AI</h3>
+                    <p>Powered by state-of-the-art deep learning models trained on diverse datasets</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Fast Analysis</h3>
+                    <p>Get results in seconds with our optimized processing pipeline</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Privacy First</h3>
+                    <p>Your images are processed securely and never stored without permission</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>High Accuracy</h3>
+                    <p>Consistently high detection rates across different types of manipulations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h2>Truth<span>Shield</span></h2>
+                    </div>
+                    <p>Protecting truth with advanced deepfake detection technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">Features</a>
+                    <a href="#">How It Works</a>
+                    <a href="#">API</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="#">Documentation</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Research</a>
+                    <a href="#">Case Studies</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Press</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Truth Shield. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+        <p class="loading-text">Analyzing image with AI...</p>
+    </div>
+
+    <div class="toast" id="toast">
+        <div class="toast-icon">
+            <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="toast-content">
+            <p id="toast-message"></p>
+        </div>
+        <button class="toast-close" id="toast-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+

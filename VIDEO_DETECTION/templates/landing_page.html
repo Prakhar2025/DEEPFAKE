@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Truth Shield{% endblock %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .bg-gradient {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+        }
+        
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(135deg, #6366F1, #8B5CF6);
+        }
+        
+        .btn-gradient {
+            background-image: linear-gradient(135deg, #6366F1, #8B5CF6);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(131, 88, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .shadow-custom {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .clip-path-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        
+        .clip-path-wave {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 90%, 50% 85%, 25% 90%, 0 85%);
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #8B5CF6;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366F1;
+        }
+        
+        /* Modal scrolling */
+        .modal-content {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        /* Fixed modal header and footer */
+        .modal-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .modal-footer {
+            position: sticky;
+            bottom: 0;
+            background: white;
+            z-index: 10;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+    <div>
+        <!-- Navbar -->
+        <section class="w-full px-8 text-gray-700 bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+            <div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
+                <div class="relative flex flex-col md:flex-row">
+                    <a href="#_" class="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gradient rounded-lg flex items-center justify-center mr-2">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+                            <span class="mx-auto text-xl font-black leading-none text-gradient select-none">Truth Shield</span>
+                        </div>
+                    </a>
+                    <nav class="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
+                        <a href="#_" class="mr-5 font-medium leading-6 text-gray-600 hover:text-indigo-600 transition-colors duration-200">Home</a>
+                        <a href="#features" class="mr-5 font-medium leading-6 text-gray-600 hover:text-indigo-600 transition-colors duration-200">Features</a>
+                        <a href="#learnmore" class="mr-5 font-medium leading-6 text-gray-600 hover:text-indigo-600 transition-colors duration-200">How It Works</a>
+                    </nav>
+                </div>
+        
+                <div class="inline-flex items-center ml-5 space-x-6 lg:justify-end">
+                    <a href="javascript:void(0)" onclick="showUploadModal()" class="btn-gradient inline-flex items-center justify-center px-6 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap rounded-full shadow-sm">
+                        Try Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 md:pt-40 md:pb-24 bg-white overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full">
+                <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-indigo-100 rounded-full filter blur-3xl opacity-30 animate-pulse-slow"></div>
+                <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-100 rounded-full filter blur-3xl opacity-30 animate-pulse-slow"></div>
+            </div>
+            
+            <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5 relative z-10">
+                <div class="flex flex-wrap items-center sm:-mx-3">
+                    <div class="w-full md:w-1/2 md:px-3">
+                        <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
+                            <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
+                                <span class="block xl:inline">Empowering You to Detect</span>
+                                <span class="block text-gradient xl:inline">Realistic Deepfake Content.</span>
+                            </h1>
+                            <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl leading-relaxed">
+                                Experience the latest advancements in deepfake technology and unleash your creativity with our cutting-edge platform.
+                            </p>
+                            <div class="relative flex flex-col sm:flex-row sm:space-x-4">
+                                <a href="javascript:void(0)" onclick="showUploadModal()" class="btn-gradient flex items-center w-full px-6 py-3 mb-3 text-lg text-white rounded-full sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                                    Upload Video
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                                <a href="#learnmore" class="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-full hover:bg-gray-200 hover:text-gray-600 transition-all duration-200">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="relative">
+                            <div class="absolute top-0 left-0 w-full h-full bg-indigo-500 rounded-2xl -rotate-6 scale-105 opacity-10"></div>
+                            <div class="absolute top-0 left-0 w-full h-full bg-purple-500 rounded-2xl rotate-3 scale-105 opacity-10"></div>
+                            <div class="w-full h-auto overflow-hidden rounded-2xl shadow-xl sm:rounded-3xl relative z-10 card-hover">
+                                <img src="https://lawtrend.in/wp-content/uploads/2023/11/ai-deep-fake.jpeg" class="w-full h-auto">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                                    <div class="flex items-center">
+                                        <div class="h-2 w-2 rounded-full bg-red-500 mr-2 animate-pulse"></div>
+                                        <span class="text-white text-sm font-medium">AI-powered detection active</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="py-10 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                        <div class="h-full bg-white rounded-xl shadow-custom p-8 card-hover">
+                            <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-indigo-100">
+                                <i class="fas fa-tachometer-alt text-indigo-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold mb-2">98%</h3>
+                            <p class="text-gray-600">Detection Accuracy</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                        <div class="h-full bg-white rounded-xl shadow-custom p-8 card-hover">
+                            <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-purple-100">
+                                <i class="fas fa-bolt text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold mb-2">2.5s</h3>
+                            <p class="text-gray-600">Processing Speed</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-4">
+                        <div class="h-full bg-white rounded-xl shadow-custom p-8 card-hover">
+                            <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-indigo-100">
+                                <i class="fas fa-shield-alt text-indigo-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold mb-2">100%</h3>
+                            <p class="text-gray-600">Secure Processing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+        <!-- How It Works Section -->
+        <section class="px-2 py-24 bg-white md:px-0" id="learnmore">
+            <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl">
+                        <span class="block">How It Works</span>
+                    </h2>
+                    <p class="mx-auto mt-4 text-xl text-gray-500 md:max-w-2xl">Detecting deepfake content has now been easier. Follow these simple steps to get started:</p>
+                </div>
+                
+                <div class="flex flex-wrap items-center -mx-3">
+                    <div class="w-full md:w-1/2 px-3">
+                        <div class="w-full pb-6 space-y-6 md:pb-0">
+                            <div class="relative">
+                                <!-- Step 1 -->
+                                <div class="flex items-start mb-10 relative">
+                                    <div class="absolute top-0 left-6 h-full w-0.5 bg-gradient-to-b from-indigo-600 to-purple-600 z-0"></div>
+                                    <div class="flex-shrink-0 w-12 h-12 mr-6 bg-gradient rounded-full flex items-center justify-center text-white font-bold text-xl relative z-10">
+                                        1
+                                    </div>
+                                    <div class="pt-1">
+                                        <h3 class="text-xl font-bold mb-2">Upload Your Content</h3>
+                                        <p class="text-gray-600 leading-relaxed">Simply upload your video through our secure interface. We support all common video formats up to 100MB.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 2 -->
+                                <div class="flex items-start mb-10 relative">
+                                    <div class="absolute top-0 left-6 h-full w-0.5 bg-gradient-to-b from-purple-600 to-indigo-600 z-0"></div>
+                                    <div class="flex-shrink-0 w-12 h-12 mr-6 bg-gradient rounded-full flex items-center justify-center text-white font-bold text-xl relative z-10">
+                                        2
+                                    </div>
+                                    <div class="pt-1">
+                                        <h3 class="text-xl font-bold mb-2">AI Processing</h3>
+                                        <p class="text-gray-600 leading-relaxed">Our advanced AI algorithms analyze your content frame by frame to detect manipulation patterns.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 3 -->
+                                <div class="flex items-start relative">
+                                    <div class="flex-shrink-0 w-12 h-12 mr-6 bg-gradient rounded-full flex items-center justify-center text-white font-bold text-xl relative z-10">
+                                        3
+                                    </div>
+                                    <div class="pt-1">
+                                        <h3 class="text-xl font-bold mb-2">Detect Deepfake</h3>
+                                        <p class="text-gray-600 leading-relaxed">Receive a detailed analysis report with confidence scores and visual indicators of detected manipulations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-10">
+                                <a href="javascript:void(0)" onclick="showUploadModal()" class="btn-gradient inline-flex items-center px-6 py-3 text-white rounded-full">
+                                    Get Started Now <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <div class="relative">
+                            <div class="absolute -top-4 -left-4 w-24 h-24 bg-indigo-100 rounded-full filter blur-xl opacity-70"></div>
+                            <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-100 rounded-full filter blur-xl opacity-70"></div>
+                            <div class="mx-auto max-w-md relative z-10">
+                                <img class="object-cover object-center rounded-xl shadow-xl card-hover" alt="how it works" src="https://www.livelaw.in/h-upload/2023/11/21/750x450_505235-deepfake-technology.webp">
+                                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-600/20 to-purple-600/20 rounded-xl"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="py-20 bg-gray-50" id="features">
+            <div class="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
+                <div class="flex flex-wrap items-center -mx-3">
+                    <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
+                        <div class="w-full lg:max-w-md">
+                            <h2 class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">High-tech tools to counter the deepfake threat!</h2>
+                            <p class="mb-4 font-medium tracking-tight text-gray-600 xl:mb-6">Our arsenal is tailored to combat deepfake technology effectively. Here's what we offer:</p>
+                            <ul>
+                                <li class="flex items-center py-2 space-x-4 xl:py-3">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-microchip text-pink-500 text-xl"></i>
+                                    </div>
+                                    <span class="font-medium text-gray-700">Rapid Processing and Deployment</span>
+                                </li>
+                                <li class="flex items-center py-2 space-x-4 xl:py-3">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-search text-yellow-500 text-xl"></i>
+                                    </div>
+                                    <span class="font-medium text-gray-700">Comprehensive Tracking and Surveillance</span>
+                                </li>
+                                <li class="flex items-center py-2 space-x-4 xl:py-3">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-lock text-green-500 text-xl"></i>
+                                    </div>
+                                    <span class="font-medium text-gray-700">Bulletproof Security for Your Platform</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
+                        <div class="relative">
+                            <div class="absolute -top-4 -right-4 w-32 h-32 bg-indigo-100 rounded-full filter blur-xl opacity-70"></div>
+                            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-100 rounded-full filter blur-xl opacity-70"></div>
+                            <img class="mx-auto sm:max-w-sm lg:max-w-full rounded-xl shadow-xl card-hover" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient clip-path-wave">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Ready to Experience Truth Shield?</h2>
+                <p class="text-white text-opacity-90 max-w-2xl mx-auto mb-8">Join thousands of users who trust our platform for deepfake detection and analysis.</p>
+                <a href="javascript:void(0)" onclick="showUploadModal()" class="inline-flex items-center px-8 py-3 bg-white text-indigo-600 rounded-full font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    Try It Now <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="bg-white">
+            <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+                <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+                    <div class="px-5 py-2">
+                        <a href="#" class="text-base leading-6 text-gray-500 hover:text-indigo-600 transition-colors duration-200">
+                            About
+                        </a>
+                    </div>
+                    <div class="px-5 py-2">
+                        <a href="#" class="text-base leading-6 text-gray-500 hover:text-indigo-600 transition-colors duration-200">
+                            Blog
+                        </a>
+                    </div>
+                    <div class="px-5 py-2">
+                        <a href="#" class="text-base leading-6 text-gray-500 hover:text-indigo-600 transition-colors duration-200">
+                            Team
+                        </a>
+                    </div>
+                    <div class="px-5 py-2">
+                        <a href="#" class="text-base leading-6 text-gray-500 hover:text-indigo-600 transition-colors duration-200">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="px-5 py-2">
+                        <a href="#" class="text-base leading-6 text-gray-500 hover:text-indigo-600 transition-colors duration-200">
+                            Terms
+                        </a>
+                    </div>
+                </nav>
+                <div class="flex justify-center mt-8 space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-indigo-600 transition-colors duration-200">
+                        <span class="sr-only">Facebook</span>
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-600 transition-colors duration-200">
+                        <span class="sr-only">Instagram</span>
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-600 transition-colors duration-200">
+                        <span class="sr-only">Twitter</span>
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-600 transition-colors duration-200">
+                        <span class="sr-only">GitHub</span>
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-600 transition-colors duration-200">
+                        <span class="sr-only">LinkedIn</span>
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+                <p class="mt-8 text-base leading-6 text-center text-gray-400">
+                    © 2025 Truth Shield, Inc. All rights reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Upload Modal -->
+    <div id="uploadModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 max-h-[90vh] flex flex-col">
+            <!-- Modal Header - Fixed at top -->
+            <div class="bg-gradient py-4 px-6 modal-header rounded-t-2xl">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-white">Upload Video for Analysis</h3>
+                    <button onclick="hideUploadModal()" class="text-white hover:text-gray-200 focus:outline-none">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Modal Content - Scrollable -->
+            <div class="p-6 overflow-y-auto modal-content">
+                <form method="post" enctype="multipart/form-data" class="space-y-4" id="uploadForm">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        {{ form.video.label_tag }}
+                        <div class="mt-1 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-indigo-500 transition-colors cursor-pointer" id="dropZone">
+                            {{ form.video }}
+                            <div class="space-y-2 mt-2">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400"></i>
+                                <p class="text-gray-500">Drag and drop your video here or click to browse</p>
+                                <p class="text-xs text-gray-400">Supported formats: MP4, MOV, AVI (Max 100MB)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <video id="videoPreview" class="hidden w-full rounded-lg shadow-sm" controls></video>
+                        <div class="hidden mt-2" id="progressContainer">
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full w-0" id="progressBar"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>Processing...</span>
+                                <span id="progressText">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Modal Footer - Fixed at bottom -->
+            <div class="modal-footer rounded-b-2xl">
+                <div class="flex justify-end space-x-3">
+                    <button type="button" onclick="hideUploadModal()" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors">
+                        Cancel
+                    </button>
+                    <button type="button" onclick="submitForm()" class="btn-gradient px-4 py-2 text-white rounded-md">
+                        Analyze Video
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showUploadModal() {
+            document.getElementById('uploadModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideUploadModal() {
+            document.getElementById('uploadModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function submitForm() {
+            document.getElementById('uploadForm').submit();
+        }
+
+        document.getElementById('{{ form.video.id_for_label }}').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            var videoPreview = document.getElementById('videoPreview');
+            var progressContainer = document.getElementById('progressContainer');
+            var progressBar = document.getElementById('progressBar');
+            var progressText = document.getElementById('progressText');
+
+            if (file) {
+                var url = URL.createObjectURL(file);
+                videoPreview.src = url;
+                videoPreview.classList.remove('hidden');
+                progressContainer.classList.remove('hidden');
+                
+                // Simulate progress
+                var progress = 0;
+                var interval = setInterval(function() {
+                    progress += 5;
+                    progressBar.style.width = progress + '%';
+                    progressText.textContent = progress + '%';
+                    
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                    }
+                }, 200);
+                
+                // Scroll to ensure buttons are visible
+                setTimeout(function() {
+                    var modalContent = document.querySelector('.modal-content');
+                    modalContent.scrollTop = modalContent.scrollHeight;
+                }, 300);
+            } else {
+                videoPreview.src = '';
+                videoPreview.classList.add('hidden');
+                progressContainer.classList.add('hidden');
+            }
+        });
+        
+        // Drag and drop functionality
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('{{ form.video.id_for_label }}');
+        
+        if (dropZone && fileInput) {
+            dropZone.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                dropZone.classList.add('border-indigo-500');
+            });
+            
+            dropZone.addEventListener('dragleave', function() {
+                dropZone.classList.remove('border-indigo-500');
+            });
+            
+            dropZone.addEventListener('drop', function(e) {
+                e.preventDefault();
+                dropZone.classList.remove('border-indigo-500');
+                
+                if (e.dataTransfer.files.length) {
+                    fileInput.files = e.dataTransfer.files;
+                    var event = new Event('change');
+                    fileInput.dispatchEvent(event);
+                }
+            });
+            
+            dropZone.addEventListener('click', function() {
+                fileInput.click();
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjust for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.text-gray-700.bg-white');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,806 @@
+[
+  {
+    "timestamp": "2025-03-27T13:45:30.144876",
+    "image_path": "static/uploads\\451861cdec91432ab22183769785bb95.jpg",
+    "result": "Real",
+    "confidence": 0.6170167348905206
+  },
+  {
+    "timestamp": "2025-03-27T13:45:42.762395",
+    "image_path": "static/uploads\\7275fd409197411e9d7fd2d82c512b26.jpg",
+    "result": "Real",
+    "confidence": 0.6942401655959162
+  },
+  {
+    "timestamp": "2025-03-27T13:46:18.672711",
+    "image_path": "static/uploads\\740997b03cec4f6e9d1c8e60ab4f070c.jpg",
+    "result": "Real",
+    "confidence": 0.6955060845968288
+  },
+  {
+    "timestamp": "2025-03-27T13:47:09.033297",
+    "image_path": "static/uploads\\9ab4a5caec9f44c7bbfa62b305c6f1f9.jpg",
+    "result": "Fake",
+    "confidence": 0.8695642386984601
+  },
+  {
+    "timestamp": "2025-03-27T13:48:25.813238",
+    "image_path": "static/uploads\\f84b9ab1e8434bd9ac9dd74d0f0c9ad9.jpg",
+    "result": "Real",
+    "confidence": 0.7554770729995333
+  },
+  {
+    "timestamp": "2025-03-27T13:49:46.633731",
+    "image_path": "static/uploads\\423583e4535b41dcb23e9da96d5a748d.jpg",
+    "result": "Fake",
+    "confidence": 0.8562596738632744
+  },
+  {
+    "timestamp": "2025-03-27T13:54:34.695987",
+    "image_path": "static/uploads\\c9fbcf23e0914eb8baf69caba63b876f.jpg",
+    "result": "Real",
+    "confidence": 0.6779328521139701
+  },
+  {
+    "timestamp": "2025-03-27T13:55:12.929132",
+    "image_path": "static/uploads\\881c221416d7445e816d102aeba77223.jpg",
+    "result": "Fake",
+    "confidence": 0.8054636425732737
+  },
+  {
+    "timestamp": "2025-03-27T14:02:25.030319",
+    "image_path": "static/uploads\\ea370f62b6304a89bd4216139ca9e4c6.jpg",
+    "result": "Real",
+    "confidence": 0.6616597828291756
+  },
+  {
+    "timestamp": "2025-03-27T14:03:00.455183",
+    "image_path": "static/uploads\\4db884116a3940c2a768ac9d03d7f59e.jpg",
+    "result": "Real",
+    "confidence": 0.687740963470022
+  },
+  {
+    "timestamp": "2025-03-27T14:03:40.600079",
+    "image_path": "static/uploads\\29612e8458174ca386dc9bf5baf27ce8.jpg",
+    "result": "Fake",
+    "confidence": 0.8275463272595763
+  },
+  {
+    "timestamp": "2025-03-27T14:04:14.593941",
+    "image_path": "static/uploads\\3b567ea7ddb247288d7af91cc7151715.jpg",
+    "result": "Fake",
+    "confidence": 0.8506264348412698
+  },
+  {
+    "timestamp": "2025-03-27T14:04:28.094509",
+    "image_path": "static/uploads\\bb2755312aba47328f0ff08478232996.jpg",
+    "result": "Fake",
+    "confidence": 0.8672807687531049
+  },
+  {
+    "timestamp": "2025-03-27T14:05:16.298902",
+    "image_path": "static/uploads\\bbb44a28a5904febbdc6d270512df50e.jpg",
+    "result": "Fake",
+    "confidence": 0.8878732369306419
+  },
+  {
+    "timestamp": "2025-03-27T14:06:39.313604",
+    "image_path": "static/uploads\\88a5bb206eee468cb59c160346b6490d.jpg",
+    "result": "Real",
+    "confidence": 0.6823935684691862
+  },
+  {
+    "timestamp": "2025-03-27T14:07:36.428909",
+    "image_path": "static/uploads\\b495bf0336ac425cb854d8619f1c5e9f.jpg",
+    "result": "Real",
+    "confidence": 0.6274281437743006
+  },
+  {
+    "timestamp": "2025-03-27T14:09:33.398873",
+    "image_path": "static/uploads\\c30eeb1703084132aa1c1783dc7505c3.jpg",
+    "result": "Real",
+    "confidence": 0.6482415944214696
+  },
+  {
+    "timestamp": "2025-03-27T14:09:50.750144",
+    "image_path": "static/uploads\\98442793e99842328d7589bc61b0e451.jpg",
+    "result": "Real",
+    "confidence": 0.6556656934671284
+  },
+  {
+    "timestamp": "2025-03-27T14:10:20.684361",
+    "image_path": "static/uploads\\1b60e5d596604f77817b298ea334a58f.png",
+    "result": "Fake",
+    "confidence": 0.8906854182481766
+  },
+  {
+    "timestamp": "2025-03-27T14:10:35.938212",
+    "image_path": "static/uploads\\4bc0d5ae44a543159a45aa60cc7f819d.png",
+    "result": "Fake",
+    "confidence": 0.8898899985708085
+  },
+  {
+    "timestamp": "2025-03-27T14:10:46.330593",
+    "image_path": "static/uploads\\86c14fb1357e4305b95405f400f8e649.png",
+    "result": "Fake",
+    "confidence": 0.9118944922553169
+  },
+  {
+    "timestamp": "2025-03-27T14:11:02.290845",
+    "image_path": "static/uploads\\3c95b4c79ab04d02a060765e3d51f00c.jpg",
+    "result": "Real",
+    "confidence": 0.6329371008334598
+  },
+  {
+    "timestamp": "2025-03-27T14:14:27.934079",
+    "image_path": "static/uploads\\3d630f3622f5403696f67186ffb11309.jpg",
+    "result": "Fake",
+    "confidence": 0.8451969684365356
+  },
+  {
+    "timestamp": "2025-03-27T14:15:29.117576",
+    "image_path": "static/uploads\\8b2b0b6e2aeb453ebaf8bb36d03287c9.jpg",
+    "result": "Fake",
+    "confidence": 0.8525232401151452
+  },
+  {
+    "timestamp": "2025-03-27T14:15:53.408997",
+    "image_path": "static/uploads\\ce16a9aae09c4299a44de1645fcc0b4f.jpg",
+    "result": "Real",
+    "confidence": 0.8161114658596756
+  },
+  {
+    "timestamp": "2025-03-27T14:16:33.930762",
+    "image_path": "static/uploads\\456c3cd820cd4b9984bcac9a09e5b37e.jpg",
+    "result": "Fake",
+    "confidence": 0.9496628354338135
+  },
+  {
+    "timestamp": "2025-03-27T14:16:47.191245",
+    "image_path": "static/uploads\\198594c19bcb4b92b7c0a78d37e3cdbb.jpg",
+    "result": "Fake",
+    "confidence": 0.8679008476867344
+  },
+  {
+    "timestamp": "2025-03-27T14:17:00.499921",
+    "image_path": "static/uploads\\bb9ecd826c7d48058c061f0885fa140c.jpg",
+    "result": "Real",
+    "confidence": 0.6830301189901586
+  },
+  {
+    "timestamp": "2025-03-27T14:17:08.088773",
+    "image_path": "static/uploads\\8d2614e063ff4bcb8812c3f6e96e6279.jpg",
+    "result": "Fake",
+    "confidence": 0.8451969684365356
+  },
+  {
+    "timestamp": "2025-03-27T14:17:26.589482",
+    "image_path": "static/uploads\\ee0a40ea9a28402ab6f612e54a091810.jpg",
+    "result": "Fake",
+    "confidence": 0.9383456944444445
+  },
+  {
+    "timestamp": "2025-03-27T14:17:35.088724",
+    "image_path": "static/uploads\\bb8faaa164a74176889ffa47cd428dfc.jpg",
+    "result": "Fake",
+    "confidence": 0.8403791612413195
+  },
+  {
+    "timestamp": "2025-03-27T14:21:57.285915",
+    "image_path": "static/uploads\\80f8db943b90462da4a13fce130b8f3c.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-03-27T14:25:39.364438",
+    "image_path": "static/uploads\\79ed9765231b4e8082e9b6db1ed3d57e.jpg",
+    "result": "Fake",
+    "confidence": 0.7964085604945047
+  },
+  {
+    "timestamp": "2025-03-27T14:26:30.162839",
+    "image_path": "static/uploads\\c29692a2e0c44cfe9eeed2b320d764bb.webp",
+    "result": "Fake",
+    "confidence": 0.881973385810852
+  },
+  {
+    "timestamp": "2025-03-27T14:28:17.518408",
+    "image_path": "static/uploads\\fc6a656a831d431eb8ffc3da4b8e26a7.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-03-27T14:30:09.158426",
+    "image_path": "static/uploads\\ff92924c1e8e4460bba840ce83e2d9fd.jpg",
+    "result": "Real",
+    "confidence": 0.7809118284479136
+  },
+  {
+    "timestamp": "2025-03-27T14:30:48.615168",
+    "image_path": "static/uploads\\883fc913fe0f46719c94979b0561976d.jpg",
+    "result": "Fake",
+    "confidence": 0.826175011168284
+  },
+  {
+    "timestamp": "2025-03-27T14:31:03.591333",
+    "image_path": "static/uploads\\dae1b3d16cf44b199111c83ce53a483d.jpg",
+    "result": "Real",
+    "confidence": 0.7379265148692743
+  },
+  {
+    "timestamp": "2025-03-27T14:34:32.762033",
+    "image_path": "static/uploads\\e3717ddd86974621837be126ae4c1217.png",
+    "result": "Real",
+    "confidence": 0.7429345936936448
+  },
+  {
+    "timestamp": "2025-03-27T14:35:12.455836",
+    "image_path": "static/uploads\\0224b3f02edb49f698dd6a6cdf32a95b.jpg",
+    "result": "Real",
+    "confidence": 0.7636846834172459
+  },
+  {
+    "timestamp": "2025-03-27T14:35:56.729705",
+    "image_path": "static/uploads\\b123d1d2011949f5942220d993e801e8.jpg",
+    "result": "Fake",
+    "confidence": 0.8161114658596756
+  },
+  {
+    "timestamp": "2025-03-27T14:36:49.593123",
+    "image_path": "static/uploads\\7861f9bc54ca48c0929c2e2ae3816dea.jpg",
+    "result": "Real",
+    "confidence": 0.6329371008334598
+  },
+  {
+    "timestamp": "2025-03-27T14:36:59.883890",
+    "image_path": "static/uploads\\e9b370e9676a4d329c89952ab66149b2.jpg",
+    "result": "Real",
+    "confidence": 0.6616597828291756
+  },
+  {
+    "timestamp": "2025-03-27T14:37:16.477264",
+    "image_path": "static/uploads\\a82e87119ffb4807b3d11bd774e8f637.jpg",
+    "result": "Real",
+    "confidence": 0.7742668853494855
+  },
+  {
+    "timestamp": "2025-03-27T14:37:40.801466",
+    "image_path": "static/uploads\\b380ffdd789344aba360c2bd3934f39b.jpg",
+    "result": "Real",
+    "confidence": 0.6329371008334598
+  },
+  {
+    "timestamp": "2025-03-27T14:37:52.589646",
+    "image_path": "static/uploads\\b52f17036ec940718709e3ed6fd14f1c.jpg",
+    "result": "Real",
+    "confidence": 0.6616597828291756
+  },
+  {
+    "timestamp": "2025-03-27T14:38:00.798293",
+    "image_path": "static/uploads\\ecd8b64158ee4af3a341bbea7451c1d7.jpg",
+    "result": "Real",
+    "confidence": 0.6418581075699757
+  },
+  {
+    "timestamp": "2025-03-27T14:38:12.640475",
+    "image_path": "static/uploads\\11c52b6b3ac840aa8ce2720eb6adbf5b.jpg",
+    "result": "Real",
+    "confidence": 0.6390030958382442
+  },
+  {
+    "timestamp": "2025-03-27T14:38:35.482184",
+    "image_path": "static/uploads\\2c9e0b4702304740aba0a6a2d5903fd5.jpg",
+    "result": "Real",
+    "confidence": 0.7355629097026608
+  },
+  {
+    "timestamp": "2025-03-27T14:41:24.977876",
+    "image_path": "static/uploads\\2b5f303d0b2f4734ae339da4370f71bf.webp",
+    "result": "Fake",
+    "confidence": 0.8132843837141991
+  },
+  {
+    "timestamp": "2025-03-27T14:50:37.322432",
+    "image_path": "static/uploads\\a2fd8273ab79482cb2d722f94fe8c129.jpg",
+    "result": "Fake",
+    "confidence": 0.821797513961792
+  },
+  {
+    "timestamp": "2025-03-27T14:50:48.132719",
+    "image_path": "static/uploads\\34b5d14440a840e39b62861535100455.jpg",
+    "result": "Real",
+    "confidence": 0.7539925731323653
+  },
+  {
+    "timestamp": "2025-03-27T14:51:30.830224",
+    "image_path": "static/uploads\\2f1cfd4a4cb2430b97ff21123137ed0a.jpg",
+    "result": "Fake",
+    "confidence": 0.821797513961792
+  },
+  {
+    "timestamp": "2025-03-27T14:51:55.183489",
+    "image_path": "static/uploads\\9f88f975fb3946a5bb064b749eef93a2.jpg",
+    "result": "Fake",
+    "confidence": 0.821797513961792
+  },
+  {
+    "timestamp": "2025-03-27T14:52:39.737620",
+    "image_path": "static/uploads\\ba7ef664eada4c4cb61dab641e48512b.jpg",
+    "result": "Real",
+    "confidence": 0.7636846834172459
+  },
+  {
+    "timestamp": "2025-03-27T14:53:10.757756",
+    "image_path": "static/uploads\\f3a14b12b85e43ab8e4e268d07d368aa.jpg",
+    "result": "Fake",
+    "confidence": 0.8161114658596756
+  },
+  {
+    "timestamp": "2025-03-27T14:54:07.925696",
+    "image_path": "static/uploads\\21761b5a02b946e4a6bd1705ed4d0463.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-03-27T14:55:53.796556",
+    "image_path": "static/uploads\\d7f9d098194e4a79892d19ea28983035.jpg",
+    "result": "Fake",
+    "confidence": 0.821797513961792
+  },
+  {
+    "timestamp": "2025-03-27T14:56:00.975590",
+    "image_path": "static/uploads\\b59e50034c9841618de267f53ae9f7c5.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-03-27T14:56:08.809860",
+    "image_path": "static/uploads\\221e856d1fc2492ab80fe6f8b95de093.jpg",
+    "result": "Real",
+    "confidence": 0.6616597828291756
+  },
+  {
+    "timestamp": "2025-03-27T14:56:15.784948",
+    "image_path": "static/uploads\\8ffcc3db71c645f1ba4e26b53b317707.jpg",
+    "result": "Real",
+    "confidence": 0.6390030958382442
+  },
+  {
+    "timestamp": "2025-03-27T14:56:22.402537",
+    "image_path": "static/uploads\\87497c124048491d99309e995c8f7138.jpg",
+    "result": "Fake",
+    "confidence": 0.8695642386984601
+  },
+  {
+    "timestamp": "2025-03-27T14:56:46.631859",
+    "image_path": "static/uploads\\96eb922f2404479cb0dba5ba63e39e6e.jpg",
+    "result": "Real",
+    "confidence": 0.6641388089276546
+  },
+  {
+    "timestamp": "2025-03-27T14:56:55.942485",
+    "image_path": "static/uploads\\ca0e076172184e81ac8c6b76de8daf1c.jpg",
+    "result": "Fake",
+    "confidence": 0.8703950161384241
+  },
+  {
+    "timestamp": "2025-03-27T14:57:10.683305",
+    "image_path": "static/uploads\\92b70d829f6044f6857738dbf9d46de3.jpg",
+    "result": "Fake",
+    "confidence": 0.8703950161384241
+  },
+  {
+    "timestamp": "2025-03-27T14:57:23.793074",
+    "image_path": "static/uploads\\7f7d10f7df6f44139ace22b4dc5213ed.jpg",
+    "result": "Real",
+    "confidence": 0.7172181366494657
+  },
+  {
+    "timestamp": "2025-03-27T14:57:46.785511",
+    "image_path": "static/uploads\\bf4b80093b6c420fb156f40d066b74d8.jpg",
+    "result": "Fake",
+    "confidence": 0.8834966651574255
+  },
+  {
+    "timestamp": "2025-03-27T14:58:06.191832",
+    "image_path": "static/uploads\\6dc1384fc3a143379bd24cf9551ef227.jpg",
+    "result": "Real",
+    "confidence": 0.7941301892239074
+  },
+  {
+    "timestamp": "2025-03-27T14:58:22.150897",
+    "image_path": "static/uploads\\04ee6502b1a44e7481c164d6ce79d87a.jpg",
+    "result": "Fake",
+    "confidence": 0.8327192695638389
+  },
+  {
+    "timestamp": "2025-03-27T14:58:34.592995",
+    "image_path": "static/uploads\\c6949370c4854a2faac7d7ab863b9fb3.jpg",
+    "result": "Real",
+    "confidence": 0.7217177975692937
+  },
+  {
+    "timestamp": "2025-03-27T14:58:51.116819",
+    "image_path": "static/uploads\\1c2da5de8703495fa11623cd74e3d692.jpg",
+    "result": "Fake",
+    "confidence": 0.844737678171661
+  },
+  {
+    "timestamp": "2025-03-27T14:59:05.984112",
+    "image_path": "static/uploads\\7d0aab715a5d4623872eab06a40018ad.jpg",
+    "result": "Real",
+    "confidence": 0.6471941037140762
+  },
+  {
+    "timestamp": "2025-03-27T14:59:18.992430",
+    "image_path": "static/uploads\\d0f4330d8360481a84026f3091769aff.jpg",
+    "result": "Fake",
+    "confidence": 0.8542739182692308
+  },
+  {
+    "timestamp": "2025-03-27T15:00:06.421348",
+    "image_path": "static/uploads\\05ffdd0a15064aca99247f239dc96c01.jpg",
+    "result": "Fake",
+    "confidence": 0.7941301892239074
+  },
+  {
+    "timestamp": "2025-03-27T15:00:17.091842",
+    "image_path": "static/uploads\\cf8f8dfaa2e04fb9b35de433f122eb99.jpg",
+    "result": "Real",
+    "confidence": 0.7217177975692937
+  },
+  {
+    "timestamp": "2025-03-27T15:00:23.512634",
+    "image_path": "static/uploads\\618d8d36cfc54283907e549c51810a95.jpg",
+    "result": "Fake",
+    "confidence": 0.844737678171661
+  },
+  {
+    "timestamp": "2025-03-27T15:00:32.670028",
+    "image_path": "static/uploads\\60ddcbefa3594bcea4b5800fd3bb7933.jpg",
+    "result": "Fake",
+    "confidence": 0.7941301892239074
+  },
+  {
+    "timestamp": "2025-03-27T15:00:41.543708",
+    "image_path": "static/uploads\\92970bd6c57648c7b17500fb2ed83218.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-03-27T15:00:48.311434",
+    "image_path": "static/uploads\\8c490fa5e7f9426b85e8cf419bc063a0.jpg",
+    "result": "Fake",
+    "confidence": 0.821797513961792
+  },
+  {
+    "timestamp": "2025-03-27T15:00:58.877363",
+    "image_path": "static/uploads\\a91fe38597c540c68496bc945c5a85d4.jpg",
+    "result": "Fake",
+    "confidence": 0.8703950161384241
+  },
+  {
+    "timestamp": "2025-03-27T15:06:43.440997",
+    "image_path": "static/uploads\\07b1f66ddfad4ce89e1b8f398896561e.jpg",
+    "result": "Real",
+    "confidence": 0.7002382675960734
+  },
+  {
+    "timestamp": "2025-03-27T15:07:01.824535",
+    "image_path": "static/uploads\\46ab0bbbfc3b4be68e735b265f20bdf9.jpg",
+    "result": "Real",
+    "confidence": 0.6695974173139778
+  },
+  {
+    "timestamp": "2025-03-27T15:07:08.015157",
+    "image_path": "static/uploads\\1d31c27f76704250b849b64aaab599d9.jpg",
+    "result": "Real",
+    "confidence": 0.6547310139489897
+  },
+  {
+    "timestamp": "2025-03-27T15:07:25.000483",
+    "image_path": "static/uploads\\94cc3a5803234957809fa4bf0b668b7e.jpg",
+    "result": "Real",
+    "confidence": 0.6999244920964728
+  },
+  {
+    "timestamp": "2025-03-27T15:08:02.860096",
+    "image_path": "static/uploads\\091221c5c75b489cad997025a18c6e69.jpg",
+    "result": "Real",
+    "confidence": 0.6511470599698097
+  },
+  {
+    "timestamp": "2025-03-27T15:15:24.042360",
+    "image_path": "static/uploads\\02b9815e67f746569155fc788700ff81.jpg",
+    "result": "Fake",
+    "confidence": 0.844737678171661
+  },
+  {
+    "timestamp": "2025-03-27T15:16:17.335443",
+    "image_path": "static/uploads\\fc5725a6d51f4a3a952a88d0c7b45c12.jpg",
+    "result": "Real",
+    "confidence": 0.7549703904050367
+  },
+  {
+    "timestamp": "2025-03-28T12:15:47.866378",
+    "image_path": "static/uploads\\c0bb7d75f0bc44f682cb87bbfba6aa19.jpg",
+    "result": "Real",
+    "confidence": 0.6690333755116102
+  },
+  {
+    "timestamp": "2025-03-28T12:16:07.924539",
+    "image_path": "static/uploads\\9b8ef4861792464b9a0fc3bcb8c89b79.jpg",
+    "result": "Fake",
+    "confidence": 0.821797513961792
+  },
+  {
+    "timestamp": "2025-03-28T12:16:19.036806",
+    "image_path": "static/uploads\\b3dfdf58b5bf441bb649ef49383fbdb8.jpg",
+    "result": "Real",
+    "confidence": 0.7217177975692937
+  },
+  {
+    "timestamp": "2025-03-28T12:16:35.403735",
+    "image_path": "static/uploads\\51da2405b1f64517812979db1633866f.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-03-28T12:16:52.368931",
+    "image_path": "static/uploads\\3d6bda0e238540b49e628dc04e8227a0.jpg",
+    "result": "Fake",
+    "confidence": 0.8703950161384241
+  },
+  {
+    "timestamp": "2025-03-28T12:17:08.671178",
+    "image_path": "static/uploads\\97f2d1b2a015442585a64b91d500c30a.jpg",
+    "result": "Fake",
+    "confidence": 0.8004531560019842
+  },
+  {
+    "timestamp": "2025-03-28T12:19:11.129340",
+    "image_path": "static/uploads\\260ffe3e7e33489ebfcd59c7e805d00c.png",
+    "result": "Fake",
+    "confidence": 0.805417086617013
+  },
+  {
+    "timestamp": "2025-03-28T12:19:49.080079",
+    "image_path": "static/uploads\\fb25d88ead7245b6bec1679f6c618363.jpg",
+    "result": "Fake",
+    "confidence": 0.8064082754284465
+  },
+  {
+    "timestamp": "2025-03-28T12:20:39.400100",
+    "image_path": "static/uploads\\ae296c28363648c280a8658c27d27ea3.jpg",
+    "result": "Real",
+    "confidence": 0.7735112582998359
+  },
+  {
+    "timestamp": "2025-03-28T12:21:21.439862",
+    "image_path": "static/uploads\\833ff3e926bd40249234c6a248ac4099.jpeg",
+    "result": "Real",
+    "confidence": 0.7735112582998359
+  },
+  {
+    "timestamp": "2025-03-28T12:29:37.543002",
+    "image_path": "static/uploads\\f5e6ce2f855c46469a1b6993ccde6402.jpg",
+    "result": "Real",
+    "confidence": 0.7735112582998359
+  },
+  {
+    "timestamp": "2025-03-28T12:30:13.769105",
+    "image_path": "static/uploads\\609c37093bcc44d0a0ee049642802251.png",
+    "result": "Fake",
+    "confidence": 0.805417086617013
+  },
+  {
+    "timestamp": "2025-03-28T12:30:34.252303",
+    "image_path": "static/uploads\\25e275a910f147beb5c36c89f6866852.jpg",
+    "result": "Real",
+    "confidence": 0.7217177975692937
+  },
+  {
+    "timestamp": "2025-03-28T12:30:44.650432",
+    "image_path": "static/uploads\\564820d319944dff9df41e140ef438ab.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-03-28T12:30:58.619913",
+    "image_path": "static/uploads\\041af0b0840547fd826ccf3f6a2390cf.jpg",
+    "result": "Fake",
+    "confidence": 0.8703950161384241
+  },
+  {
+    "timestamp": "2025-03-28T12:31:11.816371",
+    "image_path": "static/uploads\\42b27de5690146a6acce623da1d7d14d.jpg",
+    "result": "Fake",
+    "confidence": 0.844737678171661
+  },
+  {
+    "timestamp": "2025-03-28T12:31:22.207062",
+    "image_path": "static/uploads\\19a936f006094c63ac46f08e2e40799b.jpg",
+    "result": "Fake",
+    "confidence": 0.8542739182692308
+  },
+  {
+    "timestamp": "2025-03-28T12:31:44.297730",
+    "image_path": "static/uploads\\c14b987bdce349a8b252d148649921e8.jpg",
+    "result": "Real",
+    "confidence": 0.7549703904050367
+  },
+  {
+    "timestamp": "2025-03-28T12:32:09.961934",
+    "image_path": "static/uploads\\1123bf50aea041298c05f10a1df0249c.jpg",
+    "result": "Fake",
+    "confidence": 0.8703950161384241
+  },
+  {
+    "timestamp": "2025-03-28T12:33:33.584903",
+    "image_path": "static/uploads\\6fb72e0240694e55999ec18338545491.jpg",
+    "result": "Fake",
+    "confidence": 0.8839776227700645
+  },
+  {
+    "timestamp": "2025-03-28T12:43:24.304044",
+    "image_path": "static/uploads\\e79c952d369b446ab4215d05349feac9.jpeg",
+    "result": "Real",
+    "confidence": 0.7735112582998359
+  },
+  {
+    "timestamp": "2025-03-28T12:50:58.397983",
+    "image_path": "static/uploads\\acb551aef0eb49a5ad5751c154d4de06.jpeg",
+    "result": "Real",
+    "confidence": 0.7735112582998359
+  },
+  {
+    "timestamp": "2025-03-28T12:51:07.710545",
+    "image_path": "static/uploads\\ace0efcc97754372b86d8f511e181efd.jpg",
+    "result": "Fake",
+    "confidence": 0.8703950161384241
+  },
+  {
+    "timestamp": "2025-03-28T12:52:56.409997",
+    "image_path": "static/uploads\\985b43fbb9ea4be3a1276113030c0e50.jpeg",
+    "result": "Real",
+    "confidence": 0.7735112582998359
+  },
+  {
+    "timestamp": "2025-03-28T12:53:31.866550",
+    "image_path": "static/uploads\\dd8fc9d936584bf9919dc24696b151cc.jpg",
+    "result": "Real",
+    "confidence": 0.7217177975692937
+  },
+  {
+    "timestamp": "2025-03-28T12:53:40.780018",
+    "image_path": "static/uploads\\18f5c063957442f0836e9728653c6a97.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-03-28T12:53:54.504280",
+    "image_path": "static/uploads\\4d6545e309ee46cca40f968582019465.jpg",
+    "result": "Fake",
+    "confidence": 0.8703950161384241
+  },
+  {
+    "timestamp": "2025-03-28T13:00:14.079413",
+    "image_path": "static/uploads\\eee7a4991d1b4f699c2bd73c13f5c3a0.jpg",
+    "result": "Real",
+    "confidence": 0.6768796142808683
+  },
+  {
+    "timestamp": "2025-03-28T13:00:41.570699",
+    "image_path": "static/uploads\\b7196f3d036843c48760e625cd2f6490.jpg",
+    "result": "Fake",
+    "confidence": 0.844737678171661
+  },
+  {
+    "timestamp": "2025-03-28T13:00:58.654616",
+    "image_path": "static/uploads\\2a7318cf0ae946499a6f5b558863986c.jpg",
+    "result": "Fake",
+    "confidence": 0.8695642386984601
+  },
+  {
+    "timestamp": "2025-03-28T13:11:21.783551",
+    "image_path": "static/uploads\\68cd838d838f46828b2a49d72b2d8281.jpg",
+    "result": "Fake",
+    "confidence": 0.844737678171661
+  },
+  {
+    "timestamp": "2025-03-28T13:11:39.062322",
+    "image_path": "static/uploads\\44b844351734425786cfa8a53b509298.jpg",
+    "result": "Real",
+    "confidence": 0.7549703904050367
+  },
+  {
+    "timestamp": "2025-05-20T21:07:03.580796",
+    "image_path": "static/uploads\\68cb147d7b03485a8d55d1551c6a6b43.jpg",
+    "result": "Fake",
+    "confidence": 0.844737678171661
+  },
+  {
+    "timestamp": "2025-05-20T21:07:40.774043",
+    "image_path": "static/uploads\\1680631daaec458581157d4551f04823.jpg",
+    "result": "Fake",
+    "confidence": 0.7549703904050367
+  },
+  {
+    "timestamp": "2025-05-20T21:07:44.419838",
+    "image_path": "static/uploads\\a73fe8330d604f3a9107377c2cfc7ca5.jpg",
+    "result": "Real",
+    "confidence": 0.7549703904050367
+  },
+  {
+    "timestamp": "2025-05-21T13:32:02.030885",
+    "image_path": "static/uploads\\4eb6e2f45e364e32b38bee5862617eae.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-05-21T13:32:10.329055",
+    "image_path": "static/uploads\\0a0b03632d1d4ec5a99f66c82fc73421.jpg",
+    "result": "Real",
+    "confidence": 0.7217177975692937
+  },
+  {
+    "timestamp": "2025-05-21T13:32:16.804819",
+    "image_path": "static/uploads\\6d5781f7380749789fab99c4594d2f47.jpg",
+    "result": "Real",
+    "confidence": 0.6712198965885711
+  },
+  {
+    "timestamp": "2025-05-21T13:32:25.472200",
+    "image_path": "static/uploads\\8f471594e79140adada28b079be64d70.jpeg",
+    "result": "Real",
+    "confidence": 0.7735112582998359
+  },
+  {
+    "timestamp": "2025-05-21T13:32:41.479730",
+    "image_path": "static/uploads\\558ff00888684221b2fedfe7316fdbd9.jpg",
+    "result": "Fake",
+    "confidence": 0.821797513961792
+  },
+  {
+    "timestamp": "2025-05-21T13:32:49.149136",
+    "image_path": "static/uploads\\10e1637c92814021bf51a9630e90826d.jpg",
+    "result": "Real",
+    "confidence": 0.6308664239882095
+  },
+  {
+    "timestamp": "2025-05-21T13:32:55.549403",
+    "image_path": "static/uploads\\e9931b909b884ac9ac9b64296c1ebcbc.jpg",
+    "result": "Fake",
+    "confidence": 0.844737678171661
+  },
+  {
+    "timestamp": "2025-05-21T13:33:07.366935",
+    "image_path": "static/uploads\\2f0a63e2d8534bc4a9d8e1b68ee7082e.jpg",
+    "result": "Real",
+    "confidence": 0.7549703904050367
+  },
+  {
+    "timestamp": "2025-05-21T13:54:10.970274",
+    "image_path": "static/uploads\\bab5185145c44400b5c40dff8c391185.jpg",
+    "result": "Fake",
+    "confidence": 0.8223059284847969
+  },
+  {
+    "timestamp": "2025-05-21T13:54:29.318936",
+    "image_path": "static/uploads\\d7a32ebe949f4f268e94a6ef9e2d7c51.jpg",
+    "result": "Real",
+    "confidence": 0.6067219837883666
+  },
+  {
+    "timestamp": "2025-05-21T13:56:03.043492",
+    "image_path": "static/uploads\\bd0c829577494fa6a6f01b3914636a5c.jpg",
+    "result": "Fake",
+    "confidence": 0.844737678171661
+  },
+  {
+    "timestamp": "2025-05-26T17:37:09.366672",
+    "image_path": "static/uploads\\52190ff8a8404397a742e7d4af1af631.jpg",
+    "result": "Real",
+    "confidence": 0.7217177975692937
+  }
+]
