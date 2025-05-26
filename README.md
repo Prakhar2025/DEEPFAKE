@@ -137,5 +137,6 @@ You can use the test samples (images and videos) available in the provided Googl
 
 ## 👥 Contributors
 
-- Prakhar2025
-- [Your Teammates Here]
+- Prakhar Shukla
+- Samir Watgule
+- Varun Kumar Thakur
