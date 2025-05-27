@@ -58,7 +58,7 @@ pip install tensorflow==2.15.0
 ```bash
 python app.py
 ```
-
+Once the image detection task is completed, press Ctrl + C to stop the server and proceed to the next step.
 ---
 
 ### 2. 🎥 VIDEO_DETECTION
@@ -83,6 +83,7 @@ pip install django opencv-python pillow matplotlib scikit-learn
 ```bash
 python manage.py runserver
 ```
+Once the video detection task is completed, press Ctrl + C to stop the server and proceed to the next step.
 
 ---
 
@@ -94,12 +95,6 @@ python manage.py runserver
 Open a new terminal, then:
 
 #### 📌 Steps:
-```bash
-cd NEWS_DETECTION/app/fake-news-detector-frontend/
-npm install
-npm start
-
-```
 
 🐍 Python Setup (Backend)
 ```bash
@@ -110,6 +105,14 @@ python manage.py migrate
 python manage.py runserver
 
 ```
+
+```bash
+cd NEWS_DETECTION/app/fake-news-detector-frontend/
+npm install
+npm start
+
+```
+
 
 ---
 
@@ -133,7 +136,9 @@ python manage.py runserver
 
 ## 🧪 Testing Resources
 
-You can use the test samples (images and videos) available in the provided Google Drive folder or repository test datasets to check system accuracy and functionality.
+You can use the test samples (images and videos) available in the provided Google Drive folder 
+``` bash "https://drive.google.com/drive/folders/1SMUrzFxQwdIIosYfPBnN9Uj20LLL6KFI?usp=drive_link" ```
+ or repository test datasets to check system accuracy and functionality. 
 
 ---
 
