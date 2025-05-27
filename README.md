@@ -83,7 +83,7 @@ pip install django opencv-python pillow matplotlib scikit-learn
 ```bash
 python manage.py runserver
 ```
-Once the video detection task is completed, press Ctrl + C to stop the server and proceed to the next step.
+**Once the video detection task is completed, press Ctrl + C to stop the server and proceed to the next step.**
 
 ---
 
@@ -137,7 +137,9 @@ npm start
 ## 🧪 Testing Resources
 
 You can use the test samples (images and videos) available in the provided Google Drive folder 
-``` bash "https://drive.google.com/drive/folders/1SMUrzFxQwdIIosYfPBnN9Uj20LLL6KFI?usp=drive_link" ```
+```bash
+ "https://drive.google.com/drive/folders/1SMUrzFxQwdIIosYfPBnN9Uj20LLL6KFI?usp=drive_link"
+ ```
  or repository test datasets to check system accuracy and functionality. 
 
 ---
