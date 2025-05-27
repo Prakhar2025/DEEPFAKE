@@ -33,6 +33,8 @@ DEEPFAKE/
 
 ## 🛠️ Setup Guide
 
+```git clone https://github.com/Prakhar2025/DEEPFAKE```
+
 ### 1. 🎭 IMAGE_DETECTION
 
 > Flask-based module to detect deepfake images
@@ -88,17 +90,25 @@ python manage.py runserver
 
 > Full-stack Fake News Detection system (Django + React)
 
+⚛️ JavaScript Setup (Frontend)
+Open a new terminal, then:
+
 #### 📌 Steps:
 ```bash
-cd NEWS_DETECTION
-pip install -r requirements.txt
+cd NEWS_DETECTION/app/fake-news-detector-frontend/
 npm install
-python manage.py migrate
+npm start
+
 ```
 
-#### 🚀 Run:
+🐍 Python Setup (Backend)
 ```bash
+cd NEWS_DETECTION
+cd app/FakeNewsDetectorAPI/
+pip install -r requirements.txt
+python manage.py migrate
 python manage.py runserver
+
 ```
 
 ---
