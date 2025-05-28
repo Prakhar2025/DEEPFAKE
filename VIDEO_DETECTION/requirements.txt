@@ -1,5 +1,8 @@
 shutil
 opencv-python
-numpy
-tensorflow
+numpy==1.23.5
+tensorflow==2.12.0
 django
+
+
+
