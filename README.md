@@ -149,11 +149,13 @@ npm start
 
 ## 🧪 Testing Resources
 
-You can use the test samples (images and videos) available in the provided Google Drive folder:
+You must use the test samples (images and videos) provided in the following Google Drive folder for accurate results:
 ```bash
 https://drive.google.com/drive/folders/1SMUrzFxQwdIIosYfPBnN9Uj20LLL6KFI?usp=drive_link
 ```
-Or repository test datasets to check system accuracy and functionality.
+⚠️ Important Note:
+Use only the provided data for testing. Other random or real-world images/videos may not give accurate results, as the current system is not built to detect all types of fake content.
+To achieve that level of accuracy, we would require millions of diverse training samples — which is currently beyond the scope of this version.
 
 ---
 
