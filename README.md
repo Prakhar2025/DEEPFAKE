@@ -151,7 +151,7 @@ npm start
 
 You can use the test samples (images and videos) available in the provided Google Drive folder:
 ```bash
-https://drive.google.com/drive/folders/1SMUrzFxQwdIIosYfPBnN9Uj20LLL6KFI?usp=drive_link
+"https://drive.google.com/drive/folders/1SMUrzFxQwdIIosYfPBnN9Uj20LLL6KFI?usp=drive_link"
 ```
 Or repository test datasets to check system accuracy and functionality.
 
