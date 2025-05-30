@@ -26,6 +26,8 @@ DEEPFAKE/
 ├── deepfake-image-detector-extension/      # Chrome extension for image detection
 ├── news-extension/                         # Chrome extension for news detection
 │
+├── solution-images/                        # Final Output images of all 3 modules     
+│
 └── README.md                               # Project documentation
 ```
 
