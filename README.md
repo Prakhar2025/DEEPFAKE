@@ -155,5 +155,3 @@ You can use the test samples (images and videos) available in the provided Googl
 ## 👥 Contributors
 
 - Prakhar Shukla
-- Samir Watgule
-- Varun Kumar Thakur
