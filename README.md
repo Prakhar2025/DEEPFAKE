@@ -171,3 +171,5 @@ To achieve that level of accuracy, we would require millions of diverse training
 ## 👥 Contributors
 
 - Prakhar Shukla
+- Samir Watgule
+- Varun Kumar Thakur
