@@ -153,6 +153,10 @@ You must use the test samples (images and videos) provided in the following Goog
 ```bash
 https://drive.google.com/drive/folders/1SMUrzFxQwdIIosYfPBnN9Uj20LLL6KFI?usp=drive_link
 ```
+## 🧪 Demo Video of Solution
+```bash
+https://drive.google.com/file/d/1P24vwIzwanoxxgx5MMT700cuaQvyA-xw/view?usp=drive_link
+```
 ⚠️ Important Note:
 Use only the provided data for testing. Other random or real-world images/videos may not give accurate results, as the current system is not built to detect all types of fake content.
 To achieve that level of accuracy, we would require millions of diverse training samples — which is currently beyond the scope of this version.
